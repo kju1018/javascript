@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="/WebContent/common/bootstrap-4.6.0/css/bootstrap.min.css">
+		<script src="/WebContent/common/js/jquery-3.5.1.min.js"></script>
+		<script src="/WebContent/common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>	
+		<script src="/WebContent/common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+		<script>
+			const handleAddClick = () => {
+				const div1 = document.querySelector("#div1");
+				div1.classList.add("alert");
+				div1.classList.add("alert-success");
+				div1.classList.add("text-danger");
+			};
+
+			const handleRemoveClass = () => {
+				const div1 = document.querySelector("#div1");
+				div1.classList.remove("text-danger");		
+			};
+		</script>
+	</head>
+	<body>
+		<div class="card">
+			<div class="card-header">
+				Element의 classList 속성 사용하기
+			</div>
+			<div class="card-body">
+				<button onclick="handleAddClick()">CSS class 추가</button>
+				<button onclick="handleRemoveClass()">CSS class 제거</button>
+				<hr/>
+				<div id="div1">
+					알림 내용
+				</div>
+
+				<!-- <div class="alert alert-success text-danger"></div>
+					태그에 클래스들을 정의해서 사용하는게 아니라 동적으로 추가
+					알림 내용
+				</div> -->
+			</div>
+		
+		</div>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="/WebContent/common/bootstrap-4.6.0/css/bootstrap.min.css">
+		<script src="/WebContent/common/js/jquery-3.5.1.min.js"></script>
+		<script src="/WebContent/common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>	
+		<script src="/WebContent/common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+		<script>
+			// $(document).ready(function() {
+			// 	var img1 = $("#img1");
+			// 	img1.attr("src", "/WebContent/common/images/photo1.jpg");
+			// });
+			//ready는 html문이 밑에까지 전부 해석된 후에 실행
+			//onload와 차이점은 뭐냐 
+			//load와 ready는 다른 이벤트임 ready는 아래까지 해석하는게 div가 있구나 img가 있구나 하면서
+			//객체를 만드는데까지만 <img> 태그가 있다는거까지만
+			//load는 완전하게 다운로드되어서 보여지는 직전
+			//즉 사진이 많다던지 파일이 많으면 load가 더 늦게 실행
+			$(function() {
+				console.log("ready");
+				var img1 = $("#img1");
+				img1.attr("src", "/WebContent/common/images/photo1.jpg");
+			})
+
+			function init() {
+				console.log("load");
+			}
+		</script>
+	
+	</head>
+	<body onload="init()">
+		<div class="card">
+			<div class="card-header">
+				jQuery() 함수가 리턴하는 컬렉션 사용 방법
+			</div>
+			
+			<div class="card-body">
+				<img id="img1" src="/WebContent/common/images/photo1.jpg" height="100"/>
+				<img id="img2" src="/WebContent/common/images/photo2.jpg" height="100"/>
+				<img id="img3" src="/WebContent/common/images/photo3.jpg" height="100"/>
+				<img id="img5" src="/WebContent/common/images/photo4.jpg" height="100"/>
+				<img id="img4" src="/WebContent/common/images/photo5.jpg" height="100"/>
+			</div>
+		</div>
+	</body>
+</html>

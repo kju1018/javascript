@@ -26,7 +26,7 @@
 					.catch(() => console.log("작업이 실패되었을 때 실행"))
 					.finally(() => console.log("작업이 성공 또는 실패되었을 때 마무리 작업 실행"))
 			};
-
+			//원래는 작업1이 성공해야만 2번째 then이 실행되야하는데 작업 1이 실패해도 2번째 then이 실행됨
 			const fun2 = () => {
 				return new Promise(function(resolve, reject){
 					//시간을 요하는 작업
